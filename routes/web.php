@@ -20,3 +20,7 @@ Route::namespace("Admin")->prefix("admin")->name("admin.")->group(function () {
     Route::get("/posts", "PostsController@index")->name("posts");
     Route::get("/posts/create", "PostsController@create")->name("posts.create");
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
