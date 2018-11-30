@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Route::namespace("Admin")->prefix("admin")->name("admin.")->group(function () {
     Route::get("/", "AdminController@index")->name("index");
-    Route::get("/posts", "AdminController@showPosts")->name("showPosts");
+    Route::get("/posts", "PostsController@index")->name("posts");
+    Route::get("/posts/create", "PostsController@create")->name("posts.create");
 });
