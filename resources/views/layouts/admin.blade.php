@@ -10,12 +10,10 @@
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
-    <!-- Bootstrap CSS-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/vendor/bootstrap/css/bootstrap.min.css') }}">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="{{ asset('static/vendor/font-awesome/css/font-awesome.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('static/vendor/font-awesome/css/font-awesome.min.css') }}"> --}}
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="{{ asset('static/css/fontastic.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('static/css/fontastic.css') }}"> --}}
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <!-- jQuery Circle-->
@@ -27,7 +25,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{ asset('static/css/custom.css') }}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico"> --}}
+    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
