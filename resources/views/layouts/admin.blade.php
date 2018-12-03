@@ -19,7 +19,7 @@
     <!-- jQuery Circle-->
     {{-- <link rel="stylesheet" href="{{ asset('static/css/grasp_mobile_progress_circle-1.0.0.min.css') }}"> --}}
     <!-- Custom Scrollbar-->
-    <link rel="stylesheet" href="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}"> --}}
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="{{ asset('static/css/style.default.css') }}">
     <!-- Custom stylesheet - for your changes-->
