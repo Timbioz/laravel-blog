@@ -21,9 +21,8 @@
     <!-- Custom Scrollbar-->
     {{-- <link rel="stylesheet" href="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}"> --}}
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{{ asset('static/css/style.default.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('static/css/style.default.css') }}"> --}}
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="{{ asset('static/css/custom.css') }}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>

@@ -11,7 +11,9 @@
 // jQuery Circle with percentage
 @import "../css/grasp_mobile_progress_circle-1.0.0.min.css";
 // Font-Awesome
-@import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+@import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar";
+// Admin front default style
+@import "../css/style.default";
 
 html {
     background-color: $body-beg;
