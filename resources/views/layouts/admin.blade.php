@@ -9,25 +9,8 @@
     <meta name="robots" content="all,follow">
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
-
-    <!-- Font Awesome CSS-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/vendor/font-awesome/css/font-awesome.min.css') }}"> --}}
-    <!-- Fontastic Custom icon font-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/css/fontastic.css') }}"> --}}
-    <!-- Google fonts - Roboto -->
-    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"> --}}
-    <!-- jQuery Circle-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/css/grasp_mobile_progress_circle-1.0.0.min.css') }}"> --}}
-    <!-- Custom Scrollbar-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}"> --}}
-    <!-- theme stylesheet-->
-    {{-- <link rel="stylesheet" href="{{ asset('static/css/style.default.css') }}"> --}}
-    <!-- Custom stylesheet - for your changes-->
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body>
 <!-- Side Navbar -->
@@ -550,17 +533,8 @@
         </div>
     </footer>
 </div>
-<!-- JavaScript files-->
-<script src="{{ asset('static/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('static/vendor/popper.js/umd/popper.min.js') }}"></script>
-<script src="{{ asset('static/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('static/js/grasp_mobile_progress_circle-1.0.0.min.js') }}"></script>
-<script src="{{ asset('static/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
-<script src="{{ asset('static/vendor/chart.js/Chart.min.js') }}"></script>
-<script src="{{ asset('static/vendor/jquery-validation/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-<script src="{{ asset('static/js/charts-home.js') }}"></script>
-<!-- Main File-->
-<script src="{{ asset('static/js/front.js') }}"></script>
+
+<script src="{{ asset('js/admin.js') }}"></script>
+
 </body>
 </html>
