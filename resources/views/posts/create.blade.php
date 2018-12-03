@@ -1,25 +1,13 @@
 @extends("layouts.admin")
 
 @section('content')
-    <h1>Add New Product</h1>
+    <h1>Add New Article</h1>
     <hr>
     <form action="/admin/posts/create" method="post">
         @csrf
         <div class="form-group">
-            <label for="title">Product Name</label>
-            <input type="text" class="form-control" id="productName" name="name">
-        </div>
-        <div class="form-group">
-            <label for="description">Product Company</label>
-            <select class="form-control" name="company">
-                <option>Apple</option>
-                <option>Google</option>
-                <option>Mi</option>
-                <option>Samsung</option>
-            </select>
-
-
-
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title">
         </div>
         <div class="form-group">
             <label for="description">Product Amount</label>
