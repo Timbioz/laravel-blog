@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);@charset "UTF-8";
 
 @font-face {
   font-family: "dashboard";
@@ -143,6 +143,18 @@
 
 .icon-search:before {
   content: "z";
+}.gmpc {
+  position: relative;
+}
+
+.gmpc-percent-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  text-align: center;
 }@charset "UTF-8";
 
 /*!

@@ -7,7 +7,9 @@
 // Fontastic
 @import "../css/fontastic.css";
 // Google Fonts
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+// jQuery Circle with percentage
+@import "../css/grasp_mobile_progress_circle-1.0.0.min.css";
 
 html {
     background-color: $body-beg;

@@ -17,7 +17,7 @@
     <!-- Google fonts - Roboto -->
     {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"> --}}
     <!-- jQuery Circle-->
-    <link rel="stylesheet" href="{{ asset('static/css/grasp_mobile_progress_circle-1.0.0.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('static/css/grasp_mobile_progress_circle-1.0.0.min.css') }}"> --}}
     <!-- Custom Scrollbar-->
     <link rel="stylesheet" href="{{ asset('static/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}">
     <!-- theme stylesheet-->
