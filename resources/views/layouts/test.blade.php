@@ -66,8 +66,6 @@
         </ul>
     </nav>
 
-    </nav>
-
     <!-- Page Content -->
     <div id="content">
         <!-- We'll fill this with dummy content -->
