@@ -30273,7 +30273,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Unexpected format https://fonts.googleapis.com/css?family=Roboto:300,400,500,700 (12:1)\n\n  10 | @import url(../css/fontastic.css);\n  11 | \n> 12 | @import https://fonts.googleapis.com/css?family=Roboto:300,400,500,700;\n     | ^\n  13 | \n  14 | :root {\n  15 |   --blue: #007bff;\n\n    at runLoaders (D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\loader-runner\\lib\\LoaderRunner.js:230:18\n    at context.callback (D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.<anonymous> (D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\css-loader\\lib\\loader.js:50:18)\n    at D:\\Timbioz\\amber\\dev\\laravel-blog\\node_modules\\css-loader\\lib\\processCss.js:234:4");
 
 /***/ })
 /******/ ]);
