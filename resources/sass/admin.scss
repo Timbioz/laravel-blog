@@ -5,12 +5,12 @@
 // Font-Awesome
 @import "~font-awesome/scss/font-awesome";
 // Fontastic
-@import "../css/fontastic.css";
+@import url("../css/fontastic.css");
 // Google Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 // jQuery Circle with percentage
-@import "../css/grasp_mobile_progress_circle-1.0.0.min.css";
+@import url("../css/grasp_mobile_progress_circle-1.0.0.min.css");
 // Font-Awesome
-@import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar";
+@import url("~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css");
 // Admin front default style
 @import "admin-styles";
