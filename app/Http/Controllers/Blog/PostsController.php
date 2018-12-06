@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -34,11 +35,12 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StorePostRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePost $request)
+    public function store(StorePostRequest $request)
     {
+        $validated = $request->validated();
         return new Response();
     }
 

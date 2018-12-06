@@ -19,6 +19,7 @@ Route::namespace("Admin")->prefix("admin")->name("admin.")->group(function () {
     Route::get("/", "AdminController@index")->name("index");
     Route::get("/posts", "PostsController@index")->name("posts");
     Route::get("/posts/create", "PostsController@create")->name("posts.create");
+    Route::post("/posts/create", "PostsController@store")->name("posts.create");
 });
 
 Auth::routes();

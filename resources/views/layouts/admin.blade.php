@@ -48,7 +48,7 @@
                     <div class="navbar-holder d-flex align-items-center justify-content-between">
                         <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a>
                             <a href="index.html" class="navbar-brand">
-                                <div class="brand-text d-none d-md-inline-block"><span>Bootstrap </span><strong class="text-primary">Dashboard</strong></div>
+                                <div class="brand-text d-none d-md-inline-block"><span>Bootstrap </span></div>
                             </a>
                         </div>
                         <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
@@ -129,7 +129,7 @@
                 </div>
             </nav>
         </header>
-        <section class="container-fluid">
+        <section class="container-fluid main-content">
             @yield('content')
         </section>
         <footer class="main-footer">
