@@ -10,8 +10,8 @@
             <input type="text" class="form-control" id="post-title" name="title">
         </div>
         <div class="form-group">
-            <label for="post-text">Text</label>
-            <textarea type="text" class="form-control" id="post-text" name="amount" rows="10"></textarea>
+            <label for="post-text">Content</label>
+            <textarea type="text" class="form-control" id="post-text" name="content" rows="10"></textarea>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">

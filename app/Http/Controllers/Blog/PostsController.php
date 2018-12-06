@@ -40,8 +40,12 @@ class PostsController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+        $post = new Post;
         $validated = $request->validated();
-        return new Response();
+        $post->title = $validated->title;
+        $post->content = $validated->content;
+        $post->save();
+        return redirect()->action('PostsController@index');
     }
 
     /**

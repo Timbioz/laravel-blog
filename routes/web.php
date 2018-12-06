@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('phpinfo', function () {
+    return view('phpinfo');
+});
+
 Route::namespace("Admin")->prefix("admin")->name("admin.")->group(function () {
     Route::get("/", "AdminController@index")->name("index");
     Route::get("/posts", "PostsController@index")->name("posts");
