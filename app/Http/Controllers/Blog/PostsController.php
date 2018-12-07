@@ -5,11 +5,20 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
+use App\Repositories\PostsRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class PostsController extends Controller
 {
+
+    protected $repository;
+
+    public function __construct(PostsRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -40,16 +49,7 @@ class PostsController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $post = new Post;
-
-        $post->create($request->all());
-        // $validated = $request->validated();
-        // $post->title = $validated["title"];
-        // $post->content = $validated["content"];
-        // $post->user_id = 1;
-        // $post->slug = "awd wdwdawdnaw a";
-
-        $post->save();
+        $this->repository->store($request);
         return redirect()->action('PostsController@index');
     }
 

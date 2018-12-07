@@ -11,16 +11,7 @@ class Post extends Model
 
     protected $fillable = [
         "title",
-        'content'
-    ];
-
-    /**
-     * The model's default values for attributes.
-     *
-     * @var array
-     */
-    protected $attributes = [
-        'user_id' => 1,
-        "slug" => "wdowdwddddddd22eeododowdwd"
+        'content',
+        "slug"
     ];
 }
