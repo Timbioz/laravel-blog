@@ -42,6 +42,8 @@ class PostsController extends Controller
         return view("posts.create");
     }
 
+    // TODO: Нужен механизм обработки ошибки сохраниения + оповещение об этом пользователя
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -51,7 +53,7 @@ class PostsController extends Controller
     public function store(StorePostRequest $request)
     {
         $answer = $this->repository->store($request);
-        return redirect()->action('PostsController@index');
+        return redirect()->action('Admin\PostsController@index');
     }
 
     /**
