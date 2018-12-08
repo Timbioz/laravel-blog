@@ -26,7 +26,6 @@ class PostsRepository implements PostsRepositoryInterface
 
     public function store(StorePostRequest $request)
     {
-        $this->post->create();
         $this->post->slug = uniqid();
         $this->post->title = $request->get("title");
         $this->post->content = $request->get("content");
