@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
+use App\Interfaces\PostsRepositoryInterface;
 use App\Models\Post;
 use App\Repositories\PostsRepository;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class PostsController extends Controller
 
     protected $repository;
 
-    public function __construct(PostsRepository $repository)
+    public function __construct(PostsRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }
@@ -49,7 +50,7 @@ class PostsController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $this->repository->store($request);
+        $answer = $this->repository->store($request);
         return redirect()->action('PostsController@index');
     }
 
