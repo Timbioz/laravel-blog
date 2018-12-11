@@ -38,6 +38,7 @@
                             <li><a href="#">Page</a></li>
                         </ul>
                     </li>
+                </ul>
             </div>
     </nav>
     <div class="page">
@@ -97,7 +98,7 @@
                                 <ul aria-labelledby="notifications" class="dropdown-menu">
                                     <li>
                                         <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                            <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-profile"> <img src="https://placeimg.com/100/100/people" alt="..." class="img-fluid rounded-circle"></div>
                                             <div class="msg-body">
                                                 <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                             </div>
@@ -105,7 +106,7 @@
                                     </li>
                                     <li>
                                         <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                            <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-profile"> <img src="https://placeimg.com/100/100/people" alt="..." class="img-fluid rounded-circle"></div>
                                             <div class="msg-body">
                                                 <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                             </div>
@@ -113,7 +114,7 @@
                                     </li>
                                     <li>
                                         <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                            <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-profile"> <img src="https://placeimg.com/100/100/people" alt="..." class="img-fluid rounded-circle"></div>
                                             <div class="msg-body">
                                                 <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                             </div>

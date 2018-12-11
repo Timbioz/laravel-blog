@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\Transliterate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
 use App\Interfaces\PostsRepositoryInterface;
@@ -29,9 +30,10 @@ class PostsController extends Controller
     {
         $post = Post::all()->first();
 
-        return view("posts.index", ["post" => $post]);
-    }
+        $trans = Transliterate::toSlug("Строка для-проверки литерации");
 
+        return view("posts.index", ["post" => $post, "trans" => $trans]);
+    }
     /**
      * Show the form for creating a new resource.
      *

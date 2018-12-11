@@ -5,4 +5,6 @@
     <br>
 
     {{ $post->slug }}
+    <br>
+    {{ $trans }}
 @endsection
