@@ -11,26 +11,26 @@ class CreatePostsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger("user_id");
-            $table->unsignedInteger("category_id")->nullable();
-            $table->unsignedInteger("modified_id")->nullable();
-            $table->string("title");
-            $table->string("slug")->unique();
-            $table->unsignedInteger("image_id")->nullable();
-            $table->string("description")->nullable();
-            $table->string("short_description")->nullable();
-            $table->text("content")->nullable();
-            $table->string("seo_title")->nullable();
-            $table->string("seo_description")->nullable();
-            $table->tinyInteger("is_draft")->default(1);
-            $table->tinyInteger("is_private")->default(0);
-            $table->string("password")->nullable();
-            $table->tinyInteger("is_published")->default(0);
-            $table->tinyInteger("is_comments_allowed")->default(1);
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('category_id')->nullable();
+            $table->unsignedInteger('modified_id')->nullable();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->unsignedInteger('image_id')->nullable();
+            $table->string('description')->nullable();
+            $table->string('short_description')->nullable();
+            $table->text('content')->nullable();
+            $table->string('seo_title')->nullable();
+            $table->string('seo_description')->nullable();
+            $table->tinyInteger('is_draft')->default(1);
+            $table->tinyInteger('is_private')->default(0);
+            $table->string('password')->nullable();
+            $table->tinyInteger('is_published')->default(0);
+            $table->tinyInteger('is_comments_allowed')->default(1);
             $table->timestamps();
         });
     }
@@ -40,7 +40,7 @@ class CreatePostsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('posts');
     }
