@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -40,6 +40,7 @@
                     </li>
                 </ul>
             </div>
+        </div>
     </nav>
     <div class="page">
         <!-- navbar-->
