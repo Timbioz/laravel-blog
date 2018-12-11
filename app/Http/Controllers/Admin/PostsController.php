@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Helpers\Transliterate;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\PostStoreRequest;
 use App\Interfaces\PostsRepositoryInterface;
 use App\Models\Post;
 use App\Repositories\PostsRepository;
@@ -49,10 +49,11 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StorePostRequest $request
+     * @param PostStoreRequest $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(PostStoreRequest $request)
     {
         $answer = $this->repository->store($request);
         return redirect()->action('Admin\PostsController@index');
