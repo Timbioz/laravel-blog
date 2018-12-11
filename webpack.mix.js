@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin.scss', 'public/css')
     .sourceMaps(true, "source-map")
+    .copyDirectory('resources/img', 'public/img')
     .browserSync({
         proxy: "localhost:8000",
         open: false,

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset("img/favicon.ico") }}">
 </head>
 
 <body>
