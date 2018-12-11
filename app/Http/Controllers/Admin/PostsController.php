@@ -7,9 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Interfaces\PostsRepositoryInterface;
 use App\Models\Post;
-use App\Repositories\PostsRepository;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class PostsController extends Controller
 {
@@ -24,24 +23,24 @@ class PostsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(): View
     {
         $post = Post::all()->first();
 
-        $trans = Transliterate::toSlug("Строка для-проверки литерации");
+        $trans = Transliterate::toSlug('Строка для-проверки литерации');
 
-        return view("posts.index", ["post" => $post, "trans" => $trans]);
+        return view('admin.posts.index', ['post' => $post, 'trans' => $trans]);
     }
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(): View
     {
-        return view("posts.create");
+        return view('admin.posts.create');
     }
 
     // TODO: Нужен механизм обработки ошибки сохраниения + оповещение об этом пользователя
@@ -62,8 +61,9 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Post $post
+     *
+     * @return void
      */
     public function show(Post $post)
     {
@@ -73,8 +73,8 @@ class PostsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Post $post
+     * @return void
      */
     public function edit(Post $post)
     {
@@ -84,9 +84,9 @@ class PostsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Models\Post         $post
+     * @return void
      */
     public function update(Request $request, Post $post)
     {
@@ -96,8 +96,8 @@ class PostsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Post $post
+     * @return void
      */
     public function destroy(Post $post)
     {

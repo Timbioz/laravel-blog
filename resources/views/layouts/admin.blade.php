@@ -31,9 +31,16 @@
             <div class="main-menu">
                 <ul id="side-main-menu" class="side-menu list-unstyled">
                     <li><a href="{{ url('/') }}"> <i class="icon-home"></i>Home</a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Posts</a>
-                        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                    <li><a href="#postsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Posts</a>
+                        <ul id="postsDropdown" class="collapse list-unstyled ">
                         <li><a href="{{ route("admin.posts.create") }}">Create</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#categoriesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Categories</a>
+                        <ul id="categoriesDropdown" class="collapse list-unstyled ">
+                            <li><a href="{{ route("admin.categories.create") }}">Create</a></li>
                             <li><a href="#">Page</a></li>
                             <li><a href="#">Page</a></li>
                         </ul>

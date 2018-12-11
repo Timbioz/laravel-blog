@@ -8,6 +8,7 @@
 
 namespace App\Repositories;
 
+use App\Helpers\Transliterate;
 use App\Interfaces\PostsRepositoryInterface;
 use App\Models\Post;
 use Illuminate\Foundation\Http\FormRequest;
@@ -36,10 +37,10 @@ class PostsRepository implements PostsRepositoryInterface
      */
     public function store(FormRequest $request): bool
     {
-        $this->post->slug = uniqid('', true);
         $this->post->title = $request->get('title');
+        $this->post->slug = Transliterate::toSlug($this->post->title);
         $this->post->content = $request->get('content');
-        $this->post->user_id = 1;
+        $this->post->user_id = auth()->id();
         return $this->post->save();
     }
 }

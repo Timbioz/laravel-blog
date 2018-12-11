@@ -8,9 +8,8 @@
 
 namespace App\Interfaces;
 
-use Illuminate\Foundation\Http\FormRequest;
 
-interface PostsRepositoryInterface
+interface PostsRepositoryInterface extends BaseRepositoryInerface
 {
-    public function store(FormRequest $request): bool;
+
 }
