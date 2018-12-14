@@ -23,17 +23,22 @@
             </div>
         @endif
         <button type="submit" class="btn btn-primary">Submit</button>
+        <div id="summernote"></div>
     </form>
 
     @push('view_scripts')
         <script>
-            $("#post-create-form").validate({
-                rules: {
-                    title: {
-                        required: true,
-                        minlength: 5
-                    }
-                },
+            $(document).ready(function() {
+
+                $('#post-text').summernote();
+                $("#post-create-form").validate({
+                    rules: {
+                        title: {
+                            required: true,
+                            minlength: 5
+                        }
+                    },
+                });
             });
         </script>
     @endpush
