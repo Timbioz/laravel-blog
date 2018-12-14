@@ -156,6 +156,7 @@
     </div>
 
     <script src="{{ asset('js/admin.js') }}"></script>
+    @stack('view_scripts')
 
 </body>
 
