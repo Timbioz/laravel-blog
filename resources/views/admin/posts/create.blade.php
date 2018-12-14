@@ -1,9 +1,9 @@
-@extends("layouts.admin")
+@extends('layouts.admin')
 
 @section('content')
     <h1>Add New Article</h1>
     <hr>
-    <form action="{{ route("admin.posts.create") }}" method="post" id="post-create-form">
+    <form action="{{ route('admin.posts.create') }}" method="post" id="post-create-form">
         @csrf
         <div class="form-group">
             <label for="post-title">Title</label>
@@ -27,7 +27,14 @@
 
     @push('view_scripts')
         <script>
-            $("#post-create-form").validate();
+            $("#post-create-form").validate({
+                rules: {
+                    title: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+            });
         </script>
     @endpush
 
