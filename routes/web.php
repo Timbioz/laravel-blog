@@ -11,6 +11,9 @@
 |
 */
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Redirect;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,3 +39,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/test', 'HomeController@test')->name('home');
+
+Route::get('/ckeditor',function () {
+    return File::get(public_path() . '/vendor/ckeditor/samples/index.html');
+});
