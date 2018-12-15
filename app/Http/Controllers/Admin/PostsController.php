@@ -27,11 +27,11 @@ class PostsController extends Controller
      */
     public function index(): View
     {
-        $posts = Post::all();
+        $post = Post::all()->first();
 
         $trans = Transliterate::toSlug('Строка для-проверки литерации');
 
-        return view('admin.posts.index', ['posts' => $posts, 'trans' => $trans]);
+        return view('admin.posts.index', ['post' => $post, 'trans' => $trans]);
     }
     /**
      * Show the form for creating a new resource.
