@@ -1,4 +1,11 @@
 const mix = require('laravel-mix');
+const Clean = require('clean-webpack-plugin');
+
+mix.webpackConfig({
+    plugins: [
+        new Clean(['public/vendor'], {verbose: false})
+    ],
+});
 
 /*
  |--------------------------------------------------------------------------
@@ -17,7 +24,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/admin.scss', 'public/css')
     .sourceMaps(true, "source-map")
     .copyDirectory('resources/img', 'public/img')
-    .copyDirectory('resources/vendor/', 'public/vendor')
+    .copyDirectory('node_modules/tinymce/', 'public/vendor/tinymce')
     .browserSync({
         proxy: "localhost:8000",
         open: false,
