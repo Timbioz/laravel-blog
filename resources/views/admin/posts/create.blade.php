@@ -26,7 +26,6 @@
     </form>
 
     @push('view_scripts')
-        <script src="{{ asset('vendor/tinymce/tinymce.min.js') }}"></script>
         <script>
             $("#post-create-form").validate({
                 rules: {
@@ -35,9 +34,6 @@
                         minlength: 5
                     }
                 },
-            });
-            tinymce.init({
-                selector: '#post-text'
             });
         </script>
     @endpush
