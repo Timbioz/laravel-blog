@@ -16,6 +16,5 @@ yarn-error.log
 /public/static
 /public/css
 /public/js
-/public/vendor
 _ide_helper.php
 _ide_helper_models.php
