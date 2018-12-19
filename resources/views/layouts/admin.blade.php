@@ -9,9 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="{{ asset("img/favicon.ico") }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     @stack('head_scripts')
 </head>

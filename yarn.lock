@@ -3836,6 +3836,11 @@ jquery-mousewheel@>=3.0.6:
   resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
   integrity sha1-BvAzXxbjU6aV5yBr9QUDy1I6buU=
 
+jquery-ui-dist@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
+  integrity sha1-XAgV08xvkP9fqvWyaKbiO0ypBPo=
+
 jquery-validation@^1.19.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.19.0.tgz#0fedf0c0483a030c4fff072398898ac18cfd6e40"
@@ -6841,10 +6846,10 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tinymce@^4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.1.tgz#821cecb103982ec8e37aae44a8f732849e3660d0"
-  integrity sha512-lGk6QFI2KYWnIkti0TvtN30GIgJAfWWl8LBqUYdnHuywrNvgl92fqrQHhUP7YChHNhiYZj6JAy8M5cwVlbO7iQ==
+tinymce@^4.9.2:
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.2.tgz#c20ba7aa082125f16e0372fbc2f844c83236b75e"
+  integrity sha512-ZRoTGG4GAsOI73QPSNkabO7nkoYw9H6cglRB44W2mMkxSiqxYi8WJlgkUphk0fDqo6ZD6r3E+NSP4UHxF2lySg==
 
 to-array@0.1.4:
   version "0.1.4"

@@ -16,5 +16,9 @@ yarn-error.log
 /public/static
 /public/css
 /public/js
+/public/fonts
+/public/vendor
+/public/images
+/public/mix-manifest.json
 _ide_helper.php
 _ide_helper_models.php
