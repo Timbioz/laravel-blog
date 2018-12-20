@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Posts</h1>
+    <h1>Tags</h1>
     <br>
 
-    {{ $post->title }}
+    {{ $tags->title }}
     <br>
-    {{ $post->slug }}
+    {{ $tags->slug }}
 @endsection

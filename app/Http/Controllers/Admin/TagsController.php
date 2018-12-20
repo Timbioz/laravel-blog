@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Helpers\Transliterate;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostStoreRequest;
-use App\Interfaces\PostsRepositoryInterface;
-use App\Models\Post;
+use App\Http\Requests\TagStoreRequest;
+use App\Interfaces\TagsRepositoryInterface;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class PostsController extends Controller
+class TagsController extends Controller
 {
 
     protected $repository;
 
-    public function __construct(PostsRepositoryInterface $repository)
+    public function __construct(TagsRepositoryInterface $repository)
     {
         $this->middleware('auth');
 
@@ -29,9 +28,9 @@ class PostsController extends Controller
      */
     public function index(): View
     {
-        $posts = Post::all();
+        $tags = Tag::all();
 
-        return view('admin.posts.index', ['posts' => $posts]);
+        return view('admin.tags.index', ['tags' => $tags]);
     }
     /**
      * Show the form for creating a new resource.
@@ -40,7 +39,7 @@ class PostsController extends Controller
      */
     public function create(): View
     {
-        return view('admin.posts.create');
+        return view('admin.tags.create');
     }
 
     // TODO: Нужен механизм обработки ошибки сохраниения + оповещение об этом пользователя
@@ -48,24 +47,24 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param PostStoreRequest $request
+     * @param TagStoreRequest $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(PostStoreRequest $request)
+    public function store(TagStoreRequest $request)
     {
         $answer = $this->repository->store($request);
-        return redirect()->action('Admin\PostsController@index');
+        return redirect()->action('Admin\TagsController@index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post $post
+     * @param  \App\Models\Tag $tag
      *
      * @return void
      */
-    public function show(Post $post)
+    public function show(Tag $tag)
     {
         //
     }
@@ -73,10 +72,10 @@ class PostsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post $post
+     * @param  \App\Models\Tag $tag
      * @return void
      */
-    public function edit(Post $post)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -85,10 +84,10 @@ class PostsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Models\Post         $post
+     * @param  \App\Models\Tag         $tag
      * @return void
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -96,10 +95,10 @@ class PostsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post $post
+     * @param  \App\Models\Tag $tag
      * @return void
      */
-    public function destroy(Post $post)
+    public function destroy(Tag $tag)
     {
         //
     }

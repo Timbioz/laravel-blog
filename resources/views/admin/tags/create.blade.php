@@ -8,15 +8,15 @@
 
     <h1>Add New Tag</h1>
     <hr>
-    <form action="{{ route('admin.categories.create') }}" method="post" id="category-create-form">
+    <form action="{{ route('admin.tags.create') }}" method="post" id="tag-create-form">
         @csrf
         <div class="form-group">
-            <label for="category-title">Title</label>
-            <input type="text" class="form-control" id="category-title" minlength="2" name="title">
+            <label for="tag-title">Title</label>
+            <input type="text" class="form-control" id="tag-title" minlength="2" name="title">
         </div>
         <div class="form-group">
-            <label for="category-text">Description</label>
-            <textarea type="text" class="form-control tinymce-editor" id="category-text" name="content" rows="10"></textarea>
+            <label for="tag-text">Description</label>
+            <textarea type="text" class="form-control tinymce-editor" id="tag-text" name="content" rows="10"></textarea>
         </div>
 
         @if ($errors->any())
@@ -33,7 +33,7 @@
 
     @push('view_scripts')
         <script>
-            $("#category-create-form").validate({
+            $("#tag-create-form").validate({
                 rules: {
                     title: {
                         required: true,

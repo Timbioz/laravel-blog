@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Helpers\Transliterate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryStoreRequest;
 use App\Interfaces\CategoriesRepositoryInterface;
@@ -17,6 +16,8 @@ class CategoriesController extends Controller
 
     public function __construct(CategoriesRepositoryInterface $repository)
     {
+        $this->middleware('auth');
+
         $this->repository = $repository;
     }
 
@@ -27,11 +28,9 @@ class CategoriesController extends Controller
      */
     public function index(): View
     {
-        $category = Category::all()->first();
+        $categories = Category::all();
 
-        $trans = Transliterate::toSlug('Строка для-проверки литерации');
-
-        return view('admin.categories.index', ['category' => $category, 'trans' => $trans]);
+        return view('admin.categories.index', ['categories' => $categories]);
     }
     /**
      * Show the form for creating a new resource.

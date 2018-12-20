@@ -4,7 +4,7 @@
     <h1>Categories</h1>
     <br>
 
-    {{ $category->title }}
+    {{ $categories->title }}
     <br>
-    {{ $category->slug }}
+    {{ $categories->slug }}
 @endsection

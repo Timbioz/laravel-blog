@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Faker;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
-        return view("admin.index");
+
+        $faker = Faker\Factory::create('ru_RU');
+        $fishtext = file_get_contents('https://fish-text.ru/get?type=paragraph&format=html&number=8');
+
+        $message = str_replace('.', '', rtrim($faker->realText(random_int(60, 120), 1), '.'));
+        return view('admin.index')->with(['message' => $message, 'fishtext' => $fishtext]);
     }
 }
