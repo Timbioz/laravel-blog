@@ -11,7 +11,7 @@ use App\Helpers\Transliterate;
 
 $factory->define(App\Models\Tag::class, function (Faker $faker) {
 
-    $title = substr($faker->unique()->company, 0, 10);
+    $title = $faker->unique()->word;
 
     return [
         'user_id' => 1,

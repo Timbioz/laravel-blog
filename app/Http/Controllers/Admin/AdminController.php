@@ -17,7 +17,10 @@ class AdminController extends Controller
         $faker = Faker\Factory::create('ru_RU');
         $fishtext = file_get_contents('https://fish-text.ru/get?type=paragraph&format=html&number=8');
 
-        $message = str_replace('.', '', rtrim($faker->realText(random_int(60, 120), 1), '.'));
+        //$message = str_replace('.', '', rtrim($faker->realText(random_int(60, 120), 1), '.'));
+
+        $message = $faker->unique()->word;
+
         return view('admin.index')->with(['message' => $message, 'fishtext' => $fishtext]);
     }
 }
