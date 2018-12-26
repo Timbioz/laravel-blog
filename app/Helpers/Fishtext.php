@@ -43,4 +43,24 @@ class Fishtext
         $text = file_get_contents("https://fish-text.ru/get?type=paragraph&format=html&number={$paragraphs}");
         return $text;
     }
+
+
+    /**
+     * @param int $min
+     * @param int $max
+     *
+     * @return string
+     */
+    public static function getShortRu($min, $max): ?string
+    {
+        $faker = Faker\Factory::create('ru_RU');
+        $str = explode(' ', $faker->realText());
+        foreach ($str as $value){
+            if (mb_strlen($value) >= $min && mb_strlen($value) <= $max) {
+                $res = preg_replace('/[^а-я]/ui', '', $value);
+                return mb_strtolower($res);
+            }
+        }
+
+    }
 }

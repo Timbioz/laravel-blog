@@ -8,6 +8,7 @@ $factory->define(App\Models\Post::class, function (Faker $faker) {
 
     return [
         'user_id' => 1,
+        'category_id' => factory('App\Models\Category')->create()->id,
         'title' => $title,
         'slug' => \App\Helpers\Transliterate::toSlug($title),
         'content' => file_get_contents('https://fish-text.ru/get?type=paragraph&format=html&number='.random_int(5, 9))

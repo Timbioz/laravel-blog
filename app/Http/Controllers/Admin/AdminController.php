@@ -19,8 +19,22 @@ class AdminController extends Controller
 
         //$message = str_replace('.', '', rtrim($faker->realText(random_int(60, 120), 1), '.'));
 
-        $message = $faker->unique()->word;
+        $message = $faker->realText();
+        $strok = explode(' ', $message);
+        $wdpwdm = $this->Getet($strok);
 
-        return view('admin.index')->with(['message' => $message, 'fishtext' => $fishtext]);
+
+        return view('admin.index')->with(['message' => $wdpwdm, 'fishtext' => $fishtext]);
+    }
+
+    protected function Getet($str) {
+        foreach ($str as $value){
+            if (mb_strlen($value) >= 4 && mb_strlen($value) <= 7) {
+                $res = preg_replace('/[^а-я]/ui', '', $value);
+                return mb_strtolower($res);
+                break;
+            }
+        }
+
     }
 }
