@@ -14,7 +14,7 @@ $factory->define(App\Models\Tag::class, function (Faker $faker, $title) {
 
     $title;
 
-    $str = explode(' ', $faker->realText());
+    $str = explode(' ', $faker->unique()->realText());
     foreach ($str as $value){
         if (mb_strlen($value) >= 4 && mb_strlen($value) <= 7) {
             $res = preg_replace('/[^а-я]/ui', '', $value);
