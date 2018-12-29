@@ -49,6 +49,13 @@
                             <li><a href="#">Page</a></li>
                         </ul>
                     </li>
+                    <li><a href="#imagesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Images</a>
+                        <ul id="imagesDropdown" class="collapse list-unstyled ">
+                            <li><a href="{{ route("admin.images") }}">Image</a></li>
+                            <li><a href="{{ route("admin.images.upload") }}">Upload</a></li>
+                            <li><a href="#">Page</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

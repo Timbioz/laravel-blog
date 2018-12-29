@@ -29,6 +29,10 @@ Route::namespace('Admin')->middleware('auth')->prefix('admin')->name('admin.')->
     Route::get('/categories', 'CategoriesController@index')->name('categories');
     Route::get('/categories/create', 'CategoriesController@create')->name('categories.create');
     Route::post('/categories/create', 'CategoriesController@store')->name('categories.create');
+    // Images
+    Route::get('/images', 'ImagesController@index')->name('images');
+    Route::get('/images/upload', 'ImagesController@upload')->name('images.upload');
+    Route::post('/images/store', 'ImagesController@store')->name('images.store');
 });
 
 Auth::routes();
