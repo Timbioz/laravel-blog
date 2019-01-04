@@ -3,34 +3,47 @@
 @section('content')
 
     <h1>Add New Image</h1>
-    <hr>
-    <form action="{{ route('admin.images.store') }}" class="dropzone" method="post" id="images">
-        @csrf
 
-        <div class="form-group">
-            <label for="image-upload">Title</label>
-            <input type="file" class="form-control" id="image-upload" name="image">
-        </div>
+    <div class="row">
 
-        <button type="button" class="btn btn-secondary" id="ter">Remove</button>
-        <img id="blah" src="#" style="display: none" alt="your image" />
+        <form action="{{ route('admin.images.store') }}" class="dropzone" method="post" id="images">
+            @csrf
 
-        <div class="form-group">
-            <label for="post-title">Title</label>
-            <input type="text" class="form-control" id="post-title" minlength="2" name="title">
-        </div>
+            <div class="col-1">
+                <div id="image-preview">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+                </div>
             </div>
-        @endif
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+
+            <div class="form-group">
+                <label for="image-upload">Title</label>
+                <input type="file" class="form-control" id="image-upload" name="image">
+            </div>
+
+            <button type="button" class="btn btn-secondary" id="ter">Remove</button>
+            <img id="blah" src="#" style="display: none" alt="your image" />
+
+            <div class="form-group">
+                <label for="post-title">Title</label>
+                <input type="text" class="form-control" id="post-title" minlength="2" name="title">
+            </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+    </div>
+
+
+
 
     @push('view_scripts')
         <script>
