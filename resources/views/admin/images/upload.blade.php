@@ -4,42 +4,52 @@
 
     <h1>Add New Image</h1>
 
-    <div class="row">
+    <div id="image-upload-form" class="row">
+        @csrf
 
-        <form action="{{ route('admin.images.store') }}" class="dropzone" method="post" id="images">
-            @csrf
+        <div class="col-3">
+            <div id="image-preview">
+                <img src="https://via.placeholder.com/300" alt="#">
+            </div>
+            <button id="browse-btn" type="button" class="btn btn-info">Browse...</button>
+            <button id="remove-btn" type="button" class="btn btn-danger" style="display: none">Remove...</button>
+        </div>
 
-            <div class="col-1">
-                <div id="image-preview">
-
+        <div class="col-9">
+            <div id="image-properties">
+                <div id="filename" class="alert alert-secondary" role="alert">
+                    Image filename: &nbsp;
+                    <span>Browse file...</span>
+                </div>
+                <div id="size" class="alert alert-secondary" role="alert">
+                    Image size: &nbsp;
+                    <span>Browse file...</span>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="image-upload">Title</label>
-                <input type="file" class="form-control" id="image-upload" name="image">
-            </div>
 
-            <button type="button" class="btn btn-secondary" id="ter">Remove</button>
-            <img id="blah" src="#" style="display: none" alt="your image" />
+            <form action="{{ route('admin.images.store') }}" method="post">
+                <input id="image-upload-input" type="file" class="form-control" name="image" style="display: none">
+                <button type="button" class="btn btn-secondary" id="ter">Remove</button>
+                <img id="blah" src="#" style="display: none" alt="your image"/>
 
-            <div class="form-group">
-                <label for="post-title">Title</label>
-                <input type="text" class="form-control" id="post-title" minlength="2" name="title">
-            </div>
-
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                <div class="form-group">
+                    <label for="post-title">Title</label>
+                    <input type="text" class="form-control" id="post-title" minlength="2" name="title">
                 </div>
-            @endif
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
+            </form>
+        </div>
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <button type="submit" class="btn btn-primary">Save</button>
     </div>
 
 
@@ -47,31 +57,6 @@
 
     @push('view_scripts')
         <script>
-
-            let imagePreview = document.querySelector('#blah');
-            let inputImage = document.getElementById('image-upload');
-
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    let reader = new FileReader();
-                    reader.onload = function(e) {
-                        imagePreview.src = e.target.result;
-                        imagePreview.style.display = 'block';
-                    };
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-
-            document.getElementById('ter').addEventListener('click', function () {
-                inputImage.value = '';
-                imagePreview.src = '#';
-                imagePreview.style.display = 'none';
-            });
-
-            document.getElementById('image-upload').addEventListener('change', function () {
-                readURL(this);
-            });
 
         </script>
     @endpush

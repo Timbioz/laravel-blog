@@ -668,3 +668,27 @@ nav.navbar a.menu-btn:hover {
 }
 //</editor-fold>
 
+#image-upload-form {
+    #image-preview {
+        width: 100%;
+        background-color: #9c9895;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    #browse-btn, #remove-btn {
+        margin-top: 0.5rem;
+    }
+
+    #image-properties {
+        border: #E2E3E5 solid 1px;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+}
+
+
