@@ -152,18 +152,6 @@
         <section class="container-fluid main-content">
             @yield('content')
         </section>
-        <footer class="main-footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p>Your company &copy; 2017-2019</p>
-                    </div>
-                    <div class="col-sm-6 text-right">
-                        <p>Design by <a href="https://bootstrapious.com" class="external">Amber</a></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script src="{{ asset('js/admin.js') }}"></script>

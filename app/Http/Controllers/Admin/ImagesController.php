@@ -3,11 +3,23 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ImageStoreRequest;
+use App\Interfaces\ImagesRepositoryInterface;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
 class ImagesController extends Controller
 {
+
+    protected $repository;
+
+    public function __construct(ImagesRepositoryInterface $repository)
+    {
+        $this->middleware('auth');
+
+        $this->repository = $repository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -28,15 +40,13 @@ class ImagesController extends Controller
         return view('admin.images.upload');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(ImageStoreRequest $request)
     {
-        //
+
+        $this->repository->store($request);
+
+        return back()->with('success','Image Upload successful');
     }
 
     /**

@@ -2,10 +2,6 @@
 
 @section('content')
 
-    @push('head_scripts')
-        <script src="{{ asset('js/tinymce.js') }}"></script>
-    @endpush
-
     <h1>Add New Article</h1>
     <hr>
     <form action="{{ route('admin.posts.create') }}" method="post" id="post-create-form">

@@ -1,11 +1,6 @@
 @extends('layouts.admin')
 
 @section('content')
-
-    @push('head_scripts')
-        <script src="{{ asset('js/tinymce.js') }}"></script>
-    @endpush
-
     <h1>Add New Tag</h1>
     <hr>
     <form action="{{ route('admin.categories.create') }}" method="post" id="category-create-form">

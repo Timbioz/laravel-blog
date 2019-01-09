@@ -442,11 +442,11 @@ nav.navbar a.menu-btn:hover {
     color: #fff;
 }
 
-.side-navbar li.active>a {
+.side-navbar li.active > a {
     background: #33b35a;
 }
 
-.side-navbar li li.active>a {
+.side-navbar li li.active > a {
     background: #2d9f50 !important;
 }
 
@@ -666,9 +666,10 @@ nav.navbar a.menu-btn:hover {
         display: none;
     }
 }
+
 //</editor-fold>
 
-#image-upload-form {
+#image-upload {
     #image-preview {
         width: 100%;
         background-color: #9c9895;
@@ -688,6 +689,10 @@ nav.navbar a.menu-btn:hover {
         border: #E2E3E5 solid 1px;
         border-radius: 5px;
         padding: 0.5rem;
+
+        #size {
+            margin-bottom: 0;
+        }
     }
 }
 

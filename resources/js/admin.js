@@ -1,3 +1,4 @@
 import './bootstrap';
 import "jquery-validation";
-import './image-upload.js';
+import "jquery-validation/dist/additional-methods.js";
+import './tinymce.js';

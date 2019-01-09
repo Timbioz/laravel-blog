@@ -74,7 +74,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/storage/uploads/',
+	'upload_dir' => '/storage/images/posts/',
 	/*
 	|--------------------------------------------------------------------------
 	| relative path from filemanager folder to upload folder
@@ -83,7 +83,7 @@ $config = array(
 	| with final /
 	|
 	*/
-	'current_path' => '../../storage/uploads/',
+	'current_path' => '../../storage/images/posts/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ $config = array(
 	| DO NOT put inside upload folder
 	|
 	*/
-	'thumbs_base_path' => '../../storage/thumbs/',
+	'thumbs_base_path' => '../../storage/images/thumbs/',
 
 
 	/*
