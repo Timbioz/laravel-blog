@@ -31,7 +31,7 @@ class CreatePostsTable extends Migration
             $table->string('password')->nullable();
             $table->tinyInteger('is_published')->default(0);
             $table->tinyInteger('is_comments_allowed')->default(1);
-            $table->nullableTimestamps('published_at');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }
