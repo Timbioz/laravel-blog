@@ -41,6 +41,11 @@ class PostsRepository implements PostsRepositoryInterface
         $this->post->slug = Transliterate::toSlug($this->post->title);
         $this->post->content = $request->get('content');
         $this->post->user_id = auth()->id();
-        return $this->post->save();
+        $this->post->category_id = $request->get('category_id');
+        $returnValue = $this->post->save();
+
+        $this->post->tags()->sync($request->tags_ids, false);
+
+        return $returnValue;
     }
 }

@@ -7,6 +7,7 @@
     <p>{{ $message }}</p>
     <br>
     <hr>
+    <p>{{ $category->title }}</p>
     <br>
     <p>{!!html_entity_decode($fishtext)!!}</p>
 @endsection

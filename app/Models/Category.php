@@ -23,4 +23,9 @@ class Category extends Model
         'seo_title',
         'seo_description'
     ];
+
+    public function posts()
+    {
+        $this->hasMany(Post::class);
+    }
 }

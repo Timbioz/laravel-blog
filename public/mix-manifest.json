@@ -1,4 +1,6 @@
 {
+    "/js/admin.js": "/js/admin.js",
+    "/js/admin.js.map": "/js/admin.js.map",
     "/js/tinymce.js": "/js/tinymce.js",
     "/js/tinymce.js.map": "/js/tinymce.js.map",
     "/js/app.js": "/js/app.js",
@@ -7,7 +9,5 @@
     "/js/app.js.map": "/js/app.js.map",
     "/css/app.css.map": "/css/app.css.map",
     "/css/admin.css.map": "/css/admin.css.map",
-    "/js/admin.js": "/js/admin.js",
-    "/js/admin.js.map": "/js/admin.js.map",
     "/favicon.ico": "/favicon.ico"
 }

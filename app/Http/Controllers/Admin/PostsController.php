@@ -6,7 +6,9 @@ use App\Helpers\Transliterate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Interfaces\PostsRepositoryInterface;
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -29,9 +31,13 @@ class PostsController extends Controller
      */
     public function index(): View
     {
-        $posts = Post::all();
 
-        return view('admin.posts.index', ['posts' => $posts]);
+        //$posts = Post::with('category')->get()->reverse();
+        $posts = Post::all()->reverse();
+
+        //dd($posts);
+
+        return view('admin.posts.index', compact('posts'));
     }
     /**
      * Show the form for creating a new resource.
@@ -40,7 +46,9 @@ class PostsController extends Controller
      */
     public function create(): View
     {
-        return view('admin.posts.create');
+        $categories = Category::all();
+        $tags = Tag::all();
+        return view('admin.posts.create', compact('categories'), compact('tags'));
     }
 
     // TODO: Нужен механизм обработки ошибки сохраниения + оповещение об этом пользователя
@@ -54,6 +62,8 @@ class PostsController extends Controller
      */
     public function store(PostStoreRequest $request)
     {
+        //dd($request);
+
         $answer = $this->repository->store($request);
         return redirect()->action('Admin\PostsController@index');
     }

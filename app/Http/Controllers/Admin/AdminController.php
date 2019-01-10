@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Faker;
 
 class AdminController extends Controller
@@ -14,6 +15,9 @@ class AdminController extends Controller
 
     public function index() {
 
+
+        $category = Post::first()->category;
+
         $faker = Faker\Factory::create('ru_RU');
         $fishtext = file_get_contents('https://fish-text.ru/get?type=paragraph&format=html&number=8');
 
@@ -24,7 +28,7 @@ class AdminController extends Controller
         $wdpwdm = $this->Getet($strok);
 
 
-        return view('admin.index')->with(['message' => $wdpwdm, 'fishtext' => $fishtext]);
+        return view('admin.index')->with(['message' => $wdpwdm, 'fishtext' => $fishtext, 'category' => $category]);
     }
 
     protected function Getet($str) {
