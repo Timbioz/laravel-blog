@@ -56,7 +56,7 @@ class ImagesRepository implements ImagesRepositoryInterface
         $this->image->file_extension = $extension;
         $this->image->mime_type = $image->getMimeType();
 
-        $image->move(storage_path(config('image.upload_path') . 'posts/main/'), $name);
+        $image->move(storage_path(config('image.upload_path')), $name);
 
         return $this->image->save();
     }

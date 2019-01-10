@@ -18,13 +18,11 @@ class CreateImagesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('modified_by_id')->nullable();
             $table->string('filename')->unique();
+            $table->string('type');
             $table->string('mime_type');
             $table->string('file_extension');
             $table->string('alt_text')->nullable();
             $table->string('title_text')->nullable();
-            $table->string('full_size_url')->unique()->nullable();
-            $table->string('small_size_url')->unique()->nullable();
-            $table->string('medium_size_url')->unique()->nullable();
             $table->timestamps();
         });
     }
