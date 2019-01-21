@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-
+    
     @stack('head_scripts')
 </head>
 
