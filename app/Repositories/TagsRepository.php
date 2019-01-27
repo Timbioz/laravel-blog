@@ -10,11 +10,11 @@ namespace App\Repositories;
 
 
 use App\Helpers\Transliterate;
-use App\Interfaces\CategoriesRepositoryInterface;
+use App\Interfaces\TagsRepositoryInterface;
 use App\Models\Tag;
 use Illuminate\Foundation\Http\FormRequest;
 
-class TagsRepository implements CategoriesRepositoryInterface
+class TagsRepository implements TagsRepositoryInterface
 {
     protected $tag;
 

@@ -3,9 +3,14 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 // Font-Awesome
-@import "~font-awesome/scss/font-awesome";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
 // Fontastic
-@import url("../css/fontastic.css");
+@import url('~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css');
+
+@import url('../css/pro-sidebar/main.css');
+@import url('../css/pro-sidebar/sidebar-themes.css');
 // Google Fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 // Select2
