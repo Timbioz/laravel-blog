@@ -26,6 +26,7 @@ class CreatePostsTable extends Migration
             $table->text('content')->nullable();
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
+            $table->string('seo_keywords')->nullable();
             $table->tinyInteger('is_draft')->default(1);
             $table->tinyInteger('is_private')->default(0);
             $table->string('password')->nullable();

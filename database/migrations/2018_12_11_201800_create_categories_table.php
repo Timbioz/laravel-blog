@@ -25,6 +25,7 @@ class CreateCategoriesTable extends Migration
             $table->string('description')->nullable();
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
+            $table->string('seo_keywords')->nullable();
             $table->timestamps();
         });
     }
