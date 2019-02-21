@@ -4,7 +4,7 @@
     }
 }
 
-.page-content {
+#page-content {
     min-height: 100%;
     display: grid !important;
     grid-template-columns: 1fr 3fr 1fr;
@@ -34,6 +34,29 @@
     .main-content {
         grid-area: content;
         padding: 1rem;
+
+            .collapsible-block {
+
+                a {
+                    color: $admin-text-color;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    i {
+                        padding-right: 8px;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+
+
+
     }
 
     .main-sidebar {

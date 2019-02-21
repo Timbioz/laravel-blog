@@ -25,7 +25,7 @@
 
     @include('layouts.partials.nav-admin')
 
-    <main class="page-content">
+    <main id="page-content" class="page-content">
         <div id="overlay" class="overlay"></div>
         <header class="grid-item main-header">
           <i id="pin-sidebar" class="fas fa-angle-left"></i>
